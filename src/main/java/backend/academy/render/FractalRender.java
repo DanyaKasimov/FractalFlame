@@ -71,12 +71,8 @@ public class FractalRender {
                     applySymmetry(x, y, pixels, config, transform);
                 }
 
-                if (step >= 0 && x >= xMin && x <= xMax && y >= yMin && y <= yMax) {
-                    int px = (int) ((x - xMin) / (xMax - xMin) * config.width());
-                    int py = (int) ((y - yMin) / (yMax - yMin) * config.height());
-                    if (px >= 0 && px < config.width() && py >= 0 && py < config.height()) {
-                        pixels[px][py].applyColor(transform.red(), transform.green(), transform.blue());
-                    }
+                if (step >= 0) {
+                    applyPoint(x, y, pixels, config, transform);
                 }
             }
         }

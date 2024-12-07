@@ -50,10 +50,10 @@ public class FlameTransformation implements Transformation {
             new AffineTransform(0.1, 0.9, 1, 0.4, 0.2, 0, 1, 0.6, 0.1),
             new AffineTransform(0.5, -0.5, 0.3, 0.5, -0.5, 0, 0.5, 0, 0),
 
-            new AffineTransform(-0.6, 0.2, 0, 0.2, 0.6, 0, 1, 0.4, 0),   // Красный
-            new AffineTransform(0.7, 0.5, 0.4, 0.3, 0.7, 0, 0.9, 0.2, 0), // Оранжевый
-            new AffineTransform(0.8, 0.1, -0.5, 0.1, -0.8, 0.5, 1, 0.6, 0.1), // Желтый
-            new AffineTransform(0.6, 0.4, 0.4, -0.4, 0.6, 0.3, 0.8, 0.3, 0.2), // Светло-желтый
+            new AffineTransform(-0.6, 0.2, 0, 0.2, 0.6, 0, 1, 0.4, 0),
+            new AffineTransform(0.7, 0.5, 0.4, 0.3, 0.7, 0, 0.9, 0.2, 0),
+            new AffineTransform(0.8, 0.1, -0.5, 0.1, -0.8, 0.5, 1, 0.6, 0.1),
+            new AffineTransform(0.6, 0.4, 0.4, -0.4, 0.6, 0.3, 0.8, 0.3, 0.2),
 
         };
     }

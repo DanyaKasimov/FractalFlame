@@ -6,9 +6,9 @@ import backend.academy.dto.Point;
 import backend.academy.transfroms.AffineTransform;
 import backend.academy.utils.ImageUtils;
 import java.awt.image.BufferedImage;
-import java.util.Random;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.ThreadLocalRandom;
 
 @SuppressWarnings("MagicNumber")
 public class FractalRender {
@@ -49,14 +49,13 @@ public class FractalRender {
     }
 
     private void generatePoints(Config config, Pixel[][] pixels) {
-        Random random = new Random();
         for (int n = 0; n < config.iterations() / config.threads(); n++) {
-            double x = random.nextDouble() * (xMax - xMin) + xMin;
-            double y = random.nextDouble() * (yMax - yMin) + yMin;
+            double x = ThreadLocalRandom.current().nextDouble() * (xMax - xMin) + xMin;
+            double y = ThreadLocalRandom.current().nextDouble() * (yMax - yMin) + yMin;
 
             for (int step = -20; step < config.iterations(); step++) {
 
-                int transformIndex = random.nextInt(config.transforms().length);
+                int transformIndex = ThreadLocalRandom.current().nextInt(config.transforms().length);
                 AffineTransform transform = config.transforms()[transformIndex];
 
                 Point coords = transform.apply(x, y);

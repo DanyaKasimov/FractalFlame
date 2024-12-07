@@ -42,14 +42,4 @@ public class SphericalTransformation implements Transformation {
         };
     }
 
-//    public static AffineTransform[] getDefaultAffine() {
-//        return new AffineTransform[] {
-//            new AffineTransform(0.6, -0.4, -1, 0.4, 0.6, 0, 1, 0, 0.3),
-//            new AffineTransform(0.5, 0.5, -0.2, -0.5, 0.5, 1, 1, 0, 1),
-//            new AffineTransform(0.4, 0.4, 0, -0.4, 0.4, -0.4, 1, 0, 0.5),
-//            new AffineTransform(0.6, 0.1, 0, 0.4, 0.2, 1, 1, 0, 0.5),
-//            new AffineTransform(0.1, 0.9, 1, 0.4, 0.2, 0, 1, 0, 0.5),
-//            new AffineTransform(0.5, -0.5, 0.3, 0.5, -0.5, 0, 0.5, 0, 1),
-//        };
-//    }
 }
